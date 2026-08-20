@@ -44,7 +44,7 @@ let docs = [
 ];
 
 db.students.insertMany(docs, { ordered: false })
-    .then(result => console.log(result))
+    .then(result => console.log('result :', result))
     .catch(error => {
         console.log('error :', error);
 
