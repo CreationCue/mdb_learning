@@ -21,6 +21,14 @@ During bulk operations like insertMany(), MongoDB may throw a BulkWriteError (e.
 3. Network Issues: Implement retry logic to handle transient network errors.
 4. Error Handling: Examine error details to understand and address specific issues.
 
+# Unordered Inserts
+Unordered inserts in MongoDB allow remaining documents to be inserted even if some insert operations fail.
+
+- Continues inserting documents despite individual failures.
+- Prevents the entire operation from stopping due to one error.
+- Implemented using insertMany() with ordered: false.
+- Useful for bulk insert operations.
+
 */
 
 use("gfg");
